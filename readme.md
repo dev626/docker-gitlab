@@ -1,5 +1,8 @@
 Создать бэкап данных приложения:
-docker exec -t <your container name> gitlab-rake gitlab:backup:create
+docker exec -t gitlab_web_1 gitlab-rake gitlab:backup:create
+
+cron:
+0 23 * * * docker exec -t gitlab_web_1 gitlab-rake gitlab:backup:create
 
 После этого файл бэкапа должен появиться в примонтированном к /opt/gitlab/ тому.
 
