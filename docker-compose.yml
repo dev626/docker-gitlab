@@ -1,10 +1,10 @@
 web:
   image: 'gitlab/gitlab-ce:latest'
   restart: always
-  hostname: '192.168.0.6'
+  hostname: 'gitlab.darlok.net'
   environment:
     GITLAB_OMNIBUS_CONFIG:
-      external_url 'https://192.168.0.6'
+      external_url 'https://gitlab.darlok.net'
       # Add any other gitlab.rb configuration here, each on its own line
   ports:
     - '3022:22'
@@ -16,3 +16,4 @@ web:
     - './config:/etc/gitlab'
     - './logs:/var/log/gitlab'
     - './data:/var/opt/gitlab'
+
