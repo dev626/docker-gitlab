@@ -1,4 +1,5 @@
-﻿Создать бэкап данных приложения:
+﻿123
+Создать бэкап данных приложения:
 docker exec -t gitlab_web_1 gitlab-rake gitlab:backup:create
 
 cron:
